@@ -1,0 +1,23 @@
+//Fixed navbar
+div.navbar.navbar-inverse.navbar-fixed-top
+  div.container
+    div.navbar-header
+      button(type='button' class='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a(class='navbar-brand' href='/blog') Microblog
+        
+    div.navbar-collapse.collapse
+      ul.nav.navbar-nav
+        li.active
+          a(href='/blog') 首页
+        - if (!user)
+          li
+            a(href='/login') 登陆
+          li
+            a(href='/reg') 注册
+        - else
+          li
+            a(href='/logout') 登出

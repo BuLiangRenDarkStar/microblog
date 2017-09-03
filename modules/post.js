@@ -1,0 +1,14 @@
+var pool = require('./db')
+
+function Post(username,post,time) {
+    this.user = username;
+    this.post = post;
+
+    if(time) {
+        this.time = time;
+    } else {
+        this.time = new Date();
+    }
+};
+
+module.exports = Post;
